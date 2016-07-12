@@ -10,6 +10,7 @@
 		880FE71B1D35204000DE430F /* PreventSleep.h in Headers */ = {isa = PBXBuildFile; fileRef = 880FE71A1D35204000DE430F /* PreventSleep.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		880FE7221D35204000DE430F /* PreventSleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880FE7171D35204000DE430F /* PreventSleep.framework */; };
 		880FE7271D35204000DE430F /* PreventSleepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FE7261D35204000DE430F /* PreventSleepTests.swift */; };
+		880FE7321D35206700DE430F /* PreventSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FE7311D35206700DE430F /* PreventSleep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		880FE7211D35204000DE430F /* PreventSleepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreventSleepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		880FE7261D35204000DE430F /* PreventSleepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventSleepTests.swift; sourceTree = "<group>"; };
 		880FE7281D35204000DE430F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		880FE7311D35206700DE430F /* PreventSleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreventSleep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				880FE71A1D35204000DE430F /* PreventSleep.h */,
 				880FE71C1D35204000DE430F /* Info.plist */,
+				880FE7311D35206700DE430F /* PreventSleep.swift */,
 			);
 			path = PreventSleep;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880FE7321D35206700DE430F /* PreventSleep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +311,7 @@
 		880FE72C1D35204000DE430F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -319,12 +324,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.PreventSleep";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		880FE72D1D35204000DE430F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
