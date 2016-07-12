@@ -23,7 +23,6 @@ public class PreventSleep {
            return nil
         }
         
-        
         self.sleepAssertionMsg  = sleepAssertionMsg
         self.sleepAssertionType = sleepAssertionType
     }

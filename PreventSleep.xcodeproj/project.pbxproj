@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		880FE71B1D35204000DE430F /* PreventSleep.h in Headers */ = {isa = PBXBuildFile; fileRef = 880FE71A1D35204000DE430F /* PreventSleep.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		880FE7221D35204000DE430F /* PreventSleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880FE7171D35204000DE430F /* PreventSleep.framework */; };
-		880FE7271D35204000DE430F /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FE7261D35204000DE430F /* Tests.swift */; };
 		880FE7321D35206700DE430F /* PreventSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FE7311D35206700DE430F /* PreventSleep.swift */; };
+		88D1C72A1D353E500086EDE0 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D1C7291D353E500086EDE0 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,12 +25,12 @@
 
 /* Begin PBXFileReference section */
 		880FE7171D35204000DE430F /* PreventSleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PreventSleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		880FE71A1D35204000DE430F /* PreventSleep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PreventSleep.h; path = ../Sources/PreventSleep.h; sourceTree = "<group>"; };
-		880FE71C1D35204000DE430F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Sources/Info.plist; sourceTree = "<group>"; };
+		880FE71A1D35204000DE430F /* PreventSleep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PreventSleep.h; path = Sources/PreventSleep.h; sourceTree = SOURCE_ROOT; };
+		880FE71C1D35204000DE430F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
 		880FE7211D35204000DE430F /* PreventSleepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreventSleepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		880FE7261D35204000DE430F /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tests.swift; path = ../Tests/Tests.swift; sourceTree = "<group>"; };
-		880FE7281D35204000DE430F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Tests/Info.plist; sourceTree = "<group>"; };
-		880FE7311D35206700DE430F /* PreventSleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreventSleep.swift; path = ../Sources/PreventSleep.swift; sourceTree = "<group>"; };
+		880FE7281D35204000DE430F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
+		880FE7311D35206700DE430F /* PreventSleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreventSleep.swift; path = Sources/PreventSleep.swift; sourceTree = SOURCE_ROOT; };
+		88D1C7291D353E500086EDE0 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tests.swift; path = Tests/Tests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		880FE7251D35204000DE430F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				880FE7261D35204000DE430F /* Tests.swift */,
+				88D1C7291D353E500086EDE0 /* Tests.swift */,
 				880FE7281D35204000DE430F /* Info.plist */,
 			);
 			name = Tests;
@@ -207,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				880FE7271D35204000DE430F /* Tests.swift in Sources */,
+				88D1C72A1D353E500086EDE0 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,17 +352,20 @@
 		880FE72F1D35204000DE430F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PreventSleepTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jesse-c.PreventSleepTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		880FE7301D35204000DE430F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PreventSleepTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";

@@ -1,6 +1,6 @@
 //
-//  PreventSleepTests.swift
-//  PreventSleepTests
+//  Tests.swift
+//  Tests
 //
 //  Created by Jesse Claven on 12/07/2016.
 //  Copyright © 2016 Jesse Claven. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import PreventSleep
 
-class PreventSleepTests: XCTestCase {
+class Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
