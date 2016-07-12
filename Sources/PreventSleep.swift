@@ -35,7 +35,7 @@ public class PreventSleep {
     
     // Prevent the computer going to sleep
     // Returns whether the power assertion was successful or not.
-    public func preventSleep() -> Bool {
+    @objc public func preventSleep() -> Bool {
         self.sleepAssertion = IOPMAssertionCreateWithName(
             self.sleepAssertionType,
             IOPMAssertionLevel(kIOPMAssertionLevelOn),
@@ -52,7 +52,7 @@ public class PreventSleep {
     
     // Allow the computer to go to sleep
     // Returns whether the power assertion was successful or not.
-    public func allowSleep() -> Bool {
+    @objc public func allowSleep() -> Bool {
         let sleepAssertionRelease = IOPMAssertionRelease(self.sleepAssertionID!)
         
         if sleepAssertionRelease == kIOReturnSuccess {
@@ -63,7 +63,7 @@ public class PreventSleep {
     }
     
     // Can the computer go to sleep, or is it being prevented?
-    public func canSleep() -> Bool {
+    @objc public func canSleep() -> Bool {
         // Check if the assertion already exists
         if sleepAssertion == kIOReturnSuccess {
             return false
