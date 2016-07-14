@@ -66,6 +66,12 @@ public class PreventSleep {
         let sleepAssertionRelease = IOPMAssertionRelease(self.sleepAssertionID!)
         
         if sleepAssertionRelease == kIOReturnSuccess {
+            /* Updat the sleepAssertion to no longer return as a success
+             * Preferably don't use nil but no other IOReturns' seemed fitting
+             * https://opensource.apple.com/source/xnu/xnu-792.13.8/iokit/IOKit/IOReturn.h
+             */
+            self.sleepAssertion = nil
+            
             return true
         } else {
             return false
