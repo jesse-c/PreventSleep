@@ -9,7 +9,7 @@
 import Foundation
 import IOKit.pwr_mgt
 
-public class PreventSleep {
+open class PreventSleep {
     var sleepAssertionID: IOPMAssertionID? = IOPMAssertionID(0)
     var sleepAssertionType: String?
     var sleepAssertion: IOReturn?
@@ -37,15 +37,15 @@ public class PreventSleep {
     
     // Prevent the computer going to sleep
     // Returns whether the power assertion was successful or not.
-    @objc public func preventSleep() -> Bool {
+    @objc open func preventSleep() -> Bool {
         if !self.canSleep() {
             return true
         }
 
         self.sleepAssertion = IOPMAssertionCreateWithName(
-            self.sleepAssertionType,
+            self.sleepAssertionType as CFString!,
             IOPMAssertionLevel(kIOPMAssertionLevelOn),
-            sleepAssertionMsg,
+            sleepAssertionMsg as CFString!,
             &sleepAssertionID!
         )
         
@@ -58,7 +58,7 @@ public class PreventSleep {
     
     // Allow the computer to go to sleep
     // Returns whether the power assertion was successful or not.
-    @objc public func allowSleep() -> Bool {
+    @objc @discardableResult open func allowSleep() -> Bool {
         if self.canSleep() {
             return true
         }
@@ -79,7 +79,7 @@ public class PreventSleep {
     }
     
     // Can the computer go to sleep, or is it being prevented?
-    @objc public func canSleep() -> Bool {
+    @objc open func canSleep() -> Bool {
         // Check if the assertion already exists
         if self.sleepAssertion == kIOReturnSuccess {
             return false
