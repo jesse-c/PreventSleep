@@ -1,6 +1,6 @@
 # PreventSleep
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Carthage/Carthage/master/LICENSE.md)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/PreventSlep.svg)]() [![License](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 PreventSleep is a simple library to prevent a Mac from allowing a display to sleep, or from prevent idle sleep.
 
